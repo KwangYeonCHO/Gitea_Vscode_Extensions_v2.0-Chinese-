@@ -1,0 +1,171 @@
+/* Gitea Connector 样式文件 */
+:root {
+    --gitea-primary: #609926;
+    --gitea-secondary: #2c8096;
+    --gitea-accent: #3a8cb3;
+    --gitea-background: var(--vscode-editor-background);
+    --gitea-foreground: var(--vscode-editor-foreground);
+    --gitea-border: var(--vscode-panel-border);
+    --gitea-link: var(--vscode-textLink-foreground);
+    --gitea-link-active: var(--vscode-textLink-activeForeground);
+    --gitea-list-hover: var(--vscode-list-hoverBackground);
+    --gitea-success: #6CC644;
+    --gitea-warning: #FBCA04;
+    --gitea-error: #D73A49;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--gitea-background);
+    color: var(--gitea-foreground);
+    padding: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: var(--gitea-primary);
+    border-bottom: 1px solid var(--gitea-border);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+a {
+    color: var(--gitea-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--gitea-link-active);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--gitea-primary);
+}
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-list li {
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.item-list li:hover {
+    background-color: var(--gitea-list-hover);
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-success {
+    background-color: var(--gitea-success);
+    color: white;
+}
+
+.badge-warning {
+    background-color: var(--gitea-warning);
+    color: black;
+}
+
+.badge-error {
+    background-color: var(--gitea-error);
+    color: white;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--gitea-border);
+}
+
+.status-label {
+    font-weight: bold;
+}
+
+.status-value {
+    color: var(--gitea-accent);
+}
+
+.current-branch {
+    font-weight: bold;
+    color: var(--gitea-primary);
+}
+
+.branch-icon::before {
+    content: "⎇";
+    margin-right: 6px;
+}
+
+.pr-item {
+    border-left: 4px solid var(--gitea-secondary);
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 0 4px 4px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pr-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.pr-meta {
+    font-size: 0.9em;
+    color: var(--vscode-descriptionForeground);
+}
+
+/* 状态指示器 */
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-dot.modified {
+    background-color: var(--gitea-warning);
+}
+
+.status-dot.added {
+    background-color: var(--gitea-success);
+}
+
+.status-dot.deleted {
+    background-color: var(--gitea-error);
+}
+
+.status-dot.renamed {
+    background-color: var(--gitea-accent);
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid var(--gitea-border);
+    font-size: 0.9em;
+    text-align: center;
+    color: var(--vscode-descriptionForeground);
+} 
