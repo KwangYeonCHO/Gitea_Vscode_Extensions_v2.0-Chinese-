@@ -1603,9 +1603,9 @@ async function activate(context) {
             if (confirmed === '删除') {
                 await serverManager.removeServer(serverToDelete.value);
                 giteaServersProvider.refresh();
-                // 确保在删除服务器后刷新仓库列表
+                // 同步刷新仓库列表，防止因服务器变更导致仓库显示不一致
                 giteaRepositoriesProvider.refresh();
-                // 等待一小段时间后再次刷新确保UI更新
+                // 延迟再次刷新仓库列表，确保 UI 状态完全同步
                 setTimeout(() => {
                     giteaRepositoriesProvider.refresh();
                 }, 500);
